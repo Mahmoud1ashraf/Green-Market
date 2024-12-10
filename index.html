@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جرين ماركت</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>مرحبًا بك في جرين ماركت</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#products">عرض المنتجات</a></li>
+            <li><a href="#admin">صفحة المسؤول</a></li>
+            <li><a href="#cart">سلة المشتريات</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="products">
+            <h2>المنتجات المتاحة</h2>
+            <div id="product-list">
+                <!-- المنتجات سيتم إضافتها ديناميكيًا -->
+            </div>
+        </section>
+
+        <section id="admin">
+            <h2>صفحة المسؤول</h2>
+            <form id="admin-login">
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" placeholder="أدخل كلمة المرور">
+                <button type="button" onclick="adminLogin()">تسجيل الدخول</button>
+            </form>
+            <div id="admin-panel" style="display:none;">
+                <h3>إدارة المنتجات</h3>
+                <input type="text" id="product-name" placeholder="اسم المنتج">
+                <button onclick="addProduct()">إضافة المنتج</button>
+                <ul id="admin-product-list"></ul>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>سلة المشتريات</h2>
+            <div id="cart-items">
+                <!-- المنتجات التي يختارها العميل -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
